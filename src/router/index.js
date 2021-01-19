@@ -23,6 +23,11 @@ const routes = [{
     path: '/detail',
     name: 'detail',
     component: () => import('../views/detail/index')
+  },
+  {
+    path: '/playDetail',
+    name: 'playDetail',
+    component: () => import('../views/playDetail/index')
   }
 ];
 

@@ -1,6 +1,7 @@
 import { reactive } from "vue";
 import { getList } from "../../api/recommendList.js";
 import tansNum from "../../common/common.js";
+import router from "../../router/index.js";
 import "./index.scss";
 // 轮播图mock数据
 const swipeMock = [
@@ -36,6 +37,15 @@ const recommend = {
     const renderSpace = () => {
       return <div className="spaceTitle">推荐歌单</div>;
     };
+    const goToPlayDetail = (data) => {
+      router.push({
+        path: "/playDetail",
+        query: {
+          id: data,
+        },
+      });
+      console.log(data);
+    };
     const renderSwipe = () => {
       return (
         <van-swipe>
@@ -54,7 +64,11 @@ const recommend = {
         <div className="recommendList">
           {state.songList.map((item) => {
             return (
-              <div className="recommendItem" key={item.id}>
+              <div
+                className="recommendItem"
+                key={item.id}
+                onClick={() => goToPlayDetail(item.id)}
+              >
                 <img src={item.picUrl} alt="" />
                 <div className="playCount">
                   <van-icon name="play-circle-o" />

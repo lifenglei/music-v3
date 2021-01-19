@@ -26,3 +26,8 @@ export const getSingerDetail = params => request({
     url: '/artist/desc',
     data: params
 })
+export const getSongPocketDetail = params => request({
+    method: 'get',
+    url: '/playlist/detail',
+    data: params
+})

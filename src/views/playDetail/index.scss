@@ -1,0 +1,101 @@
+// 公共变量
+$bgMain: #d44439;
+$fontColor: #f1f1f1;
+
+.playPage {
+    height: 100%;
+    background: #f2f2f2;
+    overflow-y: auto;
+
+    .swipeImg {
+        height: 172px;
+        width: 100%;
+        padding: 6px;
+        background-image: linear-gradient(to bottom, $bgMain 50%, white 50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .spaceTitle {
+        width: 100%;
+        height: 280px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .top {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                transform: scale(.6);
+            }
+        }
+
+        .update {
+            position: absolute;
+            bottom: 10px;
+            left: 140px;
+            color: #969799;
+            font-size: 14px;
+        }
+    }
+
+    .playList {
+        padding-top: 15px;
+    }
+
+    .playItem {
+        position: relative;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 12px;
+            align-items: center;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                .top {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 15px;
+
+                    .name {
+                        color: #333;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+
+                    .bo {
+                        display: flex;
+                        color: #575757;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 12px;
+                        text-overflow: ellipsis;
+                        padding-bottom: 7px;
+
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+            }
+        }
+    }
+
+}
