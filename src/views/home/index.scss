@@ -1,0 +1,45 @@
+// 公共变量
+$bgMain: #d44439;
+$fontColor: #f1f1f1;
+
+.homePage {
+    height: 100%;
+}
+
+.tabBar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 40px;
+    background: $bgMain;
+    color: $fontColor;
+    font-size: 14px;
+
+    div {
+        align-items: center;
+        flex: 1;
+    }
+
+    span {
+        border-bottom: 2px solid transparent;
+        padding: 3px 0;
+        font-weight: 700;
+    }
+
+    .tabBarIndex {
+        border-bottom: 2px solid #ffffff;
+        padding: 3px 0;
+    }
+}
+
+.van-nav-bar {
+    background-color: $bgMain;
+
+    div {
+        color: $fontColor;
+    }
+}
+
+.van-nav-bar::after {
+    border-bottom: none;
+}
